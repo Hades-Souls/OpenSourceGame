@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Public\\Unity Project\\Multiplatforms\\Assets\\Scripts\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Public\\Unity Project\\Multiplatforms\\Assets\\Scripts\\PlayerMovementMain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PlayerMovementMain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Public\\Unity Project\\Multiplatforms\\Assets\\Scripts\\TouchingDirection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TouchingDirection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Public\\Unity Project\\Multiplatforms\\Assets\\Scripts\\EnemyHealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:EnemyHealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Public\\Unity Project\\Multiplatforms\\Assets\\Scripts\\bullets.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:bullets.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Public\\Unity Project\\Multiplatforms\\Assets\\Scripts\\AnimationStrings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AnimationStrings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PlayerMovementMain.cs",
+              "DocumentMoniker": "C:\\Users\\Public\\Unity Project\\Multiplatforms\\Assets\\Scripts\\PlayerMovementMain.cs",
+              "RelativeDocumentMoniker": "PlayerMovementMain.cs",
+              "ToolTip": "C:\\Users\\Public\\Unity Project\\Multiplatforms\\Assets\\Scripts\\PlayerMovementMain.cs",
+              "RelativeToolTip": "PlayerMovementMain.cs",
+              "ViewState": "AQIAAF0AAAAAAAAAAAAAAG4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-10T14:03:18.114Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TouchingDirection.cs",
+              "DocumentMoniker": "C:\\Users\\Public\\Unity Project\\Multiplatforms\\Assets\\Scripts\\TouchingDirection.cs",
+              "RelativeDocumentMoniker": "TouchingDirection.cs",
+              "ToolTip": "C:\\Users\\Public\\Unity Project\\Multiplatforms\\Assets\\Scripts\\TouchingDirection.cs",
+              "RelativeToolTip": "TouchingDirection.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-10T14:03:16.136Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EnemyHealth.cs",
+              "DocumentMoniker": "C:\\Users\\Public\\Unity Project\\Multiplatforms\\Assets\\Scripts\\EnemyHealth.cs",
+              "RelativeDocumentMoniker": "EnemyHealth.cs",
+              "ToolTip": "C:\\Users\\Public\\Unity Project\\Multiplatforms\\Assets\\Scripts\\EnemyHealth.cs",
+              "RelativeToolTip": "EnemyHealth.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-10T14:03:13.978Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "bullets.cs",
+              "DocumentMoniker": "C:\\Users\\Public\\Unity Project\\Multiplatforms\\Assets\\Scripts\\bullets.cs",
+              "RelativeDocumentMoniker": "bullets.cs",
+              "ToolTip": "C:\\Users\\Public\\Unity Project\\Multiplatforms\\Assets\\Scripts\\bullets.cs",
+              "RelativeToolTip": "bullets.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-10T14:03:12.92Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AnimationStrings.cs",
+              "DocumentMoniker": "C:\\Users\\Public\\Unity Project\\Multiplatforms\\Assets\\Scripts\\AnimationStrings.cs",
+              "RelativeDocumentMoniker": "AnimationStrings.cs",
+              "ToolTip": "C:\\Users\\Public\\Unity Project\\Multiplatforms\\Assets\\Scripts\\AnimationStrings.cs",
+              "RelativeToolTip": "AnimationStrings.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-10T14:03:10.88Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
