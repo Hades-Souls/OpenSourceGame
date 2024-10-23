@@ -11,15 +11,11 @@ public class DamageAble : MonoBehaviour
     private float _health;
     private bool isAlive = true;
     private bool invincible = false;
-    Rigidbody2D rb;
     private CapsuleCollider2D boxCollider;
-    private float recentDamageAmount = 0; // Variable to store recent damage amount
     public float poise = 100f;
     public float Maxpoise = 100f;
     public float counterDuration = 5.0f; // Duration for the counter in seconds
-    private Coroutine poiseResetCoroutine;
 
-    private float parryhealth;
     public float totalAttackReduce; // To keep track of the cumulative attack reduce value
 
     private float timeSinceHit = 0;
@@ -53,45 +49,22 @@ public class DamageAble : MonoBehaviour
     private void Awake()
     {
         animator   = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<CapsuleCollider2D>();
         poise = Maxpoise;
         health = _maxHealth;
-        parryhealth = _maxHealth;
 
     }
 
-    public void Hit(float damage, float poiseDamage, float attackreduce, bool hit)
+    public void Hit(float damage)
     {
         if (isAlive && !invincible)
         {
             invincible = true;
-            poise -= poiseDamage;
             timeSinceHit = 0; // Reset time since hit
-            recentDamageAmount = damage; // Add the damage to the recent damage amount
-            if (poise <= 0)
-            {
-                health -= damage * 2;
-                animator.SetTrigger(AnimationStrings.hit);
-                poiseResetCoroutine = StartCoroutine(ResetPoiseAfterDelay(0.5f));
-            }
-            else
-            {
-                health -= damage;
-            }
-            totalAttackReduce += attackreduce;
 
-            parryhealth = health + attackreduce;
+            health -= damage;
 
-            if (poiseResetCoroutine != null)
-            {
-                StopCoroutine(poiseResetCoroutine);
-            }
-            poiseResetCoroutine = StartCoroutine(ResetPoiseAfterDelay(5.0f));
-            if(hit)
-            {
-                totalAttackReduce = 0f;
-            }
+
         }
     }
 

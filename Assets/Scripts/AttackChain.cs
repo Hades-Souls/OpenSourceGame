@@ -1,12 +1,13 @@
+using Mono.Cecil.Cil;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class AttackChain : MonoBehaviour
 {
     public float holdThreshold = 1f; // Threshold to determine strong attack
-    private float increaseRate = 1f;
 
     private Animator animator;
     private PlayerMovementMain player;
@@ -14,25 +15,19 @@ public class AttackChain : MonoBehaviour
     private InputAction normalAttack;
     private InputAction StrongAttack;
     private InputAction ParryInput;
-
     TouchingDirecionPlayer touchingdirection;
-
+    public int attackCount;
     private GameObject strongattack;
-    private attack attack;
     private float holdTime = 0f; // Track how long the button is held
     public float hold = 0f;
-
     private float parryTime = 1f;
     public float parry = 0f;
-
     public int JumpCount = 2;
-    private float AirttackCount;
 
 
     private void Awake()
     {
         strongattack = GameObject.Find("StrongAttack");
-        attack = strongattack.GetComponent<attack>();
         player = GetComponent<PlayerMovementMain>();
         animator = GetComponent<Animator>();
         playerInput = GetComponent<PlayerInput>(); // Ensure there's a PlayerInput component attached to the same GameObject
@@ -75,24 +70,36 @@ public class AttackChain : MonoBehaviour
             parry = parryTime;
 
         }
-
         if(touchingdirection.IsGrounded)
         {
-            AirttackCount = 2;
+            animator.SetBool(AnimationStrings.AirAttack, true);
         }
 
+  
 
     }
     private void OnNormalAttackPerfomed(InputAction.CallbackContext context)
     {
+      if(context.performed && touchingdirection.IsGrounded)
+        {
+            if (animator != null)
+            {
 
+                animator.SetTrigger(AnimationStrings.Attack);
+            }
+        }
+      
+      else
+        {
+            animator.SetTrigger(AnimationStrings.AirAttackTrigger);
 
-
-            animator.SetTrigger(AnimationStrings.Attack);
+        }
+ 
 
 
 
     }
+   
 
 
     private void OnMoveActionCanceled(InputAction.CallbackContext context)
@@ -101,13 +108,7 @@ public class AttackChain : MonoBehaviour
         hold = holdTime;
         animator.SetBool(AnimationStrings.Hold, false);
         animator.SetTrigger(AnimationStrings.StrongAttack);
-        float attackincrease = attack.attackdamage * holdTime * increaseRate;
-        float maxAllowedIncrease = attack.attackdamage * 2f;
         // Limit the increase to the maximum allowed increase
-        attackincrease = Mathf.Min(attackincrease, maxAllowedIncrease);
-        float tempAttackDamage = attack.attackdamage;
-        attack.attackdamage = attackincrease;
-        attack.attackdamage = tempAttackDamage; // Reset the attack damage after use
         holdTime = 0f;
 
     }
@@ -123,8 +124,14 @@ public class AttackChain : MonoBehaviour
     }
 
 
- 
 
+    public bool AirAttack
+    {
+        get
+        {
+            return animator.GetBool(AnimationStrings.AirAttack);
+        }
+    }
 
     public bool Isparry
     {
@@ -140,4 +147,7 @@ public class AttackChain : MonoBehaviour
             return animator.GetBool(AnimationStrings.hit);
         }
     }
+
+
+
 }

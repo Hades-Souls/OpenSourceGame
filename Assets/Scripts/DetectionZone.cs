@@ -6,6 +6,7 @@ public class DetectionZone : MonoBehaviour
 {
 
     private Collider2D col;
+    public bool collision;
     public List<Collider2D> detectedcolliders = new List<Collider2D>();
     private void Awake()
     {
@@ -22,5 +23,8 @@ public class DetectionZone : MonoBehaviour
     {
         detectedcolliders.Remove(collision);
     }
-    
+    public bool AreAnyCollidersDetected()
+    {
+        return detectedcolliders.Count > 0;
+    }
 }

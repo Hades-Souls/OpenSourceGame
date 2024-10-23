@@ -7,9 +7,9 @@
             "actions": [
                 {
                     "name": "Move",
-                    "type": "Value",
+                    "type": "Button",
                     "id": "21512bc6-bb3a-4401-b8f4-7498d421b95e",
-                    "expectedControlType": "Vector2",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -72,6 +72,24 @@
                     "name": "Parry",
                     "type": "Button",
                     "id": "849b5b89-064f-475c-8d63-5c0e92a5b003",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "DropDownPlatform",
+                    "type": "Button",
+                    "id": "01b26172-4ba1-49b9-a551-cf89d330fbb0",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Interact",
+                    "type": "Button",
+                    "id": "d39b340c-500c-42a9-b057-57e285477778",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -301,17 +319,6 @@
                 },
                 {
                     "name": "",
-                    "id": "e5bbe58e-44d0-4b5d-a153-a788ac9162ee",
-                    "path": "<Keyboard>/e",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Attack",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "61ff95c8-f90f-4162-aea3-2ad76152b996",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
@@ -351,6 +358,39 @@
                     "processors": "",
                     "groups": "",
                     "action": "Parry",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "32440e0c-07cb-4e2a-ade1-8b2176a8320d",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DropDownPlatform",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "90967849-d06c-4e96-b776-5f244219f748",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DropDownPlatform",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a00a7a33-d5b4-4821-8c14-de413ef5811c",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

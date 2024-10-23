@@ -9,7 +9,7 @@ public class UIController : MonoBehaviour
     public Slider HealthSlider;  // Reference to the slider UI    public Slider staminaSlider;  // Reference to the slider UI
     public Slider easeHealthSlider;  // Reference to the slider UI
     public Slider recoverableHealthslider;
-    DamageAble damageAble;
+    PlayerDamagable playerDamagable;
 
     public float maxStamina = 100f;
     public float stamina = 0f;
@@ -55,7 +55,7 @@ public class UIController : MonoBehaviour
         recoverableHealthslider = GameObject.Find("RecoverableHealth").GetComponent<Slider>();
         attackchain = GetComponent<AttackChain>();
         // Ensure the DamageAble component is properly assigned
-        damageAble = GetComponent<DamageAble>(); // This assumes the DamageAble component is attached to the same GameObject as UIController
+        playerDamagable = GetComponent<PlayerDamagable>(); // This assumes the DamageAble component is attached to the same GameObject as UIController
 
         stamina = maxStamina;
         health = maxHealth;
@@ -66,7 +66,7 @@ public class UIController : MonoBehaviour
 
         easestaminaSlider.value = maxStamina;
         easeHealthSlider.value = maxHealth;
-        maxHealth = damageAble.maxHealth;
+        maxHealth = playerDamagable.maxHealth;
 
     }
     void Update()
@@ -78,12 +78,12 @@ public class UIController : MonoBehaviour
             stamina = Mathf.Clamp(stamina, 0, maxStamina);  // Clamp the value between 0 and maxStamina
             UpdateStaminaSlider();  // Update the slider value
         }
-        if(damageAble.health <= damageAble.maxHealth)
+        if(playerDamagable.health <= playerDamagable.maxHealth)
         {
             UpdateHealthSlider();  // Update the slider value
         }
         easestaminaSlider.value = Mathf.Lerp(easestaminaSlider.value, stamina, lerpSpeed);
-        easeHealthSlider.value = Mathf.Lerp(easeHealthSlider.value, damageAble.health, lerpSpeed);
+        easeHealthSlider.value = Mathf.Lerp(easeHealthSlider.value, playerDamagable.health, lerpSpeed);
 
         UpdaterecoverableHealthslider();
 
@@ -93,7 +93,7 @@ public class UIController : MonoBehaviour
     public void RecoverAfterAttack(bool charge, float amount)
     {
         float recoverAmount = 0f;// Amount to recover
-        float RecoverPertrigger = damageAble.totalAttackReduce /5;
+        float RecoverPertrigger = playerDamagable.totalAttackReduce /5;
         if (!charge)
         {
             recoverAmount = RecoverPertrigger;
@@ -106,7 +106,7 @@ public class UIController : MonoBehaviour
         {
             if(attackchain.hold >= 1.5f)
             {
-                recoverAmount = damageAble.totalAttackReduce;
+                recoverAmount = playerDamagable.totalAttackReduce;
                 Debug.Log(recoverAmount);
 
             }
@@ -120,8 +120,8 @@ public class UIController : MonoBehaviour
 
 
         }
-        damageAble.RecoverHealth(recoverAmount);
-        damageAble.totalAttackReduce -= recoverAmount;
+        playerDamagable.RecoverHealth(recoverAmount);
+        playerDamagable.totalAttackReduce -= recoverAmount;
 ;
     }
     public float GetStamina()
@@ -159,7 +159,7 @@ public class UIController : MonoBehaviour
     {
         if (HealthSlider != null)
         {
-            HealthSlider.value = damageAble.health;
+            HealthSlider.value = playerDamagable.health;
         }
         else
         {
@@ -169,7 +169,7 @@ public class UIController : MonoBehaviour
     {
         if (recoverableHealthslider != null)
         {
-            recoverableHealthslider.value = damageAble.health + damageAble.totalAttackReduce;
+            recoverableHealthslider.value = playerDamagable.health + playerDamagable.totalAttackReduce;
         }
  
     }

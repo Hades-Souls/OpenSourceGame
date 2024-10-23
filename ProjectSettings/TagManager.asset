@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - platform
+  - Ledge
+  - MovingPlatform
   layers:
   - Default
   - TransparentFX
@@ -17,9 +20,9 @@ TagManager:
   - Enemy
   - Legde
   - wall
-  - 
-  - 
-  - 
+  - LedgeCheck
+  - PlayerAttack
+  - EnemyAttack
   - 
   - 
   - 

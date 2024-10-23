@@ -5,9 +5,18 @@ using UnityEngine;
 public class Paralax : MonoBehaviour
 {
 
-    public Camera cam;
-    public Transform followTarget;
+    private Camera cam;
+    private Transform followTarget;
+    void Awake()
+    {
+        GameObject player = GameObject.Find("Player");
 
+        startingPosition = transform.position;
+        startingZ = transform.position.z;
+        cam = Camera.main;
+
+        followTarget = player.transform;
+    }
     Vector2 startingPosition;
 
     float startingZ;
@@ -23,11 +32,7 @@ public class Paralax : MonoBehaviour
     float parallaxFactor => Mathf.Abs(zDistanceFromTarget) / clippingPlane;
 
     // Start is called before the first frame update
-    void Start()
-    {
-        startingPosition = transform.position;
-        startingZ = transform.position.z;
-    }
+
 
     // Update is called once per frame
     void Update()

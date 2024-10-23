@@ -4,7 +4,6 @@ public class TestScripts : MonoBehaviour
 {
     private float horizontal;
     private float speed = 8f;
-    private float jumpingPower = 16f;
     private bool isFacingRight = true;
     public bool jump;
     public Vector2 walljump = new Vector2(8f, 16f);

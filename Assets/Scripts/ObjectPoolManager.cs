@@ -7,6 +7,10 @@ public class ObjectPoolManager : MonoBehaviour
 
     private Queue<GameObject> ghostPool = new Queue<GameObject>();
 
+    void Awake()
+    {
+    }
+
     void Start()
     {
         // Initialize the pool with inactive copies of the current object
