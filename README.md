@@ -1,3 +1,5 @@
 # FantasySouls
 An opensource 2d Metrovenia souls-like
-This project use Unity Editor Versions 2022.1.23f1
+Pull with Git Command
+git clone https://github.com/Hades-Souls/OpenSourceGame
+This project run on Unity Editor Versions 2022.1.23f1
