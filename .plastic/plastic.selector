@@ -1,0 +1,4 @@
+repository "Multiplatforms@hauthaitruong@cloud"
+  path "/"
+    br "/main"
+    co "/main"

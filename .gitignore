@@ -1,0 +1,22 @@
+# Unity generated
+Library/
+Logs/
+obj/
+UserSettings/
+
+# Builds
+[Bb]uild/
+[Bb]uilds/
+
+# Misc
+*.log
+*.sv
+*.swp
+*.userprefs
+*.csproj
+*.sln
+*.unityproj
+*.pidb
+*.booproj
+*.pidb.meta
+*.tmp.vs/ 
